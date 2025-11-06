@@ -35,7 +35,7 @@
       position: absolute;
       max-width: 200px;
       height: auto;
-      opacity: 0.3;
+      opacity: 0.9;
       animation: float 6s ease-in-out infinite;
     }
 
@@ -45,6 +45,12 @@
     .floating-icon:nth-child(4) { top: 30%; left: 70%; animation-delay: 3s; }
     .floating-icon:nth-child(5) { top: 70%; left: 50%; animation-delay: 4s; }
     .floating-icon:nth-child(6) { top: 50%; left: 30%; animation-delay: 5s; }
+    .floating-icon:nth-child(7) { top: 80%; left: 40%; animation-delay: 6s; }
+    .floating-icon:nth-child(8) { top: 10%; left: 60%; animation-delay: 7s; }
+    .floating-icon:nth-child(9) { top: 90%; left: 15%; animation-delay: 8s; }
+    .floating-icon:nth-child(10) { top: 25%; left: 85%; animation-delay: 9s; }
+    .floating-icon:nth-child(11) { top: 75%; left: 5%; animation-delay: 10s; }
+    .floating-icon:nth-child(12) { top: 45%; left: 90%; animation-delay: 11s; }
 
     @keyframes float {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -52,8 +58,10 @@
     }
     /* Enhanced Hero Background */
     #hero {
-      background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(20,20,20,0.9) 100%);
+      
       position: relative;
+      background: url('Nigaraga (3)_waifu2x_noise2_scale2x.png') no-repeat center center;
+      background-size: cover;
     }
 
     #hero::before {
@@ -63,11 +71,11 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
-      z-index: 0;
+      background: url('Nigaraga (3)_waifu2x_noise2_scale2x.png') no-repeat center center;
+      background-size: cover;
+      opacity: 0.7;
+      z-index: -1;
     }
-
     /* Enhanced Button */
     .hero-button {
       background: linear-gradient(45deg, #fff, #f0f0f0);
@@ -109,7 +117,7 @@
 
     /* Typing Effect */
     .typing {
-      border-right: 2px solid #fff;
+      border-right: 2px solid #871414;
       animation: blink 1s infinite;
     }
 
@@ -169,6 +177,7 @@
       list-style: none;
       display: flex;
       gap: 1.5rem;
+      margin-top: 0.23rem;
     }
 
     .nav-links li a {
@@ -660,7 +669,7 @@
   <style>
     :root {
       --bg: #000;
-      --text: #000;
+      --text: #ffffff;
       --muted: #666;
       --card-bg: #fff;
       --line: #fff;
@@ -768,19 +777,19 @@
       margin: 0 0 10px 0;
       font-size: 20px;
       font-weight: 700;
-      color: var(--text);
+      color: #000;
     }
     .meta {
       display: block;
       font-size: 13px;
-      color: var(--muted);
+      color: #000;
       margin-bottom: 12px;
       font-weight: 600;
       letter-spacing: 0.2px;
     }
     .card p {
       margin: 0;
-      color: var(--muted);
+      color: #000;
       font-size: 14px;
     }
 
@@ -825,7 +834,12 @@
       <img src="Screenshot 2025-10-03 232043.png" class="floating-icon" alt="Feeding Frenzy">
       <img src="Screenshot (5209).png" class="floating-icon" alt="Hand Detection">
       <img src="Screenshot 2025-10-04 123800.png" class="floating-icon" alt="TrackinID">
-      <img src="image.png" class="floating-icon" alt="Replica ID">
+
+      <img src="MySayori.jpeg" class="floating-icon" alt="Replica ID">
+      <img src="download (28)_waifu2x_noise1_scale4x.png" class="floating-icon" alt="Feeding Frenzy">
+      <img src="wiwokdetok.jpeg" class="floating-icon" alt="Hand Detection">
+      <img src="sayori ddlc.jpg" class="floating-icon" alt="TrackinID">
+      <img src="download (32).jpeg" class="floating-icon" alt="Replica ID">
     </div>
     <div class="profile-container">
       <div class="left-side">
@@ -987,7 +1001,7 @@
           <article class="card text-card">
             <h2 class="card-title">Making my first Landing page website</h2>
             <time class="meta">5 September 2025</time>
-            <p>.</p>
+            <p>I created my first landing page website as part of a school project. This project, called TrackinID, was designed to showcase a fleet management system. It involved integrating HTML, CSS, and basic JavaScript to create an interactive and visually appealing site. This experience taught me the importance of user-centered design and how to present complex ideas in a simple, engaging way. It was a significant step in my web development journey, combining creativity with technical skills.</p>
           </article>
         </div>
       </section>
