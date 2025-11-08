@@ -289,13 +289,17 @@
 
     #hero>div.profile-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      text-align: center;
+      justify-content: space-between;
+      gap: 2rem;
       position: relative;
       z-index: 1;
+    }
+
+    #hero .text-container {
+      text-align: left;
+      flex: 1;
     }
 
     @keyframes slideIn {
@@ -304,13 +308,14 @@
     }
 
     #hero>div.profile-container img.profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      border-radius: 0;
       object-fit: cover;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.1);
       user-select: none;
       transition: box-shadow 0.3s ease;
+      animation: fadeIn 2s ease-in-out;
     }
 
     #hero>div.profile-container img.profile-pic:hover {
@@ -363,7 +368,7 @@
     }
 
     .fade-in {
-      animation: fadeIn 2s ease-in-out;
+      animation: fadeIn 1s ease-in-out;
     }
 
     @keyframes fadeIn {
@@ -826,7 +831,7 @@
 
   <!-- Navigation Section -->
   <nav class="navbar">
-    <div class="logo">My ahh portofolio</div>
+    <div class="logo">My Web Portofolio</div>
     <ul class="nav-links" id="nav-links">
       <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -854,14 +859,18 @@
       <img src="download (32).jpeg" class="floating-icon" alt="Replica ID">
     </div>
     <div class="profile-container">
-      <h1 class="fade-in" id="tagline" style="text-align: center;"></h1>
-      <p class="hero-subtitle">Welcome to my website! feel free to wandering around</p>
+      <div class="text-container">
+        <h1 class="fade-in" id="tagline"></h1>
+        <p class="hero-subtitle">I'm just an average coders, either loves to code and sometimes kinda hate it, hehe</p>
+        <p class="hero-subtitle">feel free to check my portfolio below here!</p>
+      </div>
+      <img src="jeremy.jpg" alt="Profile Image" class="profile-pic" />
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="container slide-in-left">
-    <img src="WhatsApp Image 2025-10-04 at 00.12.48.jpeg" alt="Profile Image" class="profile-img" />
+    <img src="syabu.jpeg" alt="Profile Image" class="profile-img" />
     <div class="bio">
       <h2>About me</h2>
       <p>Hello! My name is Jeremy, but you can call me Jerry. I am passionate about coding and constantly eager to learn
@@ -1100,10 +1109,10 @@
     // Combined DOMContentLoaded functionality
     document.addEventListener('DOMContentLoaded', function() {
       // Typing Effect
-      const text = "Welcome to My Web!";
+      const text = "Hey there! I'm Jeremy :)";
       const typingText = document.getElementById('tagline');
       let index = 0;
-
+        
       function typeWriter() {
         if (index < text.length) {
           typingText.innerHTML += text.charAt(index);
